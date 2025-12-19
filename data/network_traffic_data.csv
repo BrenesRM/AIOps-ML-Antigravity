@@ -1,0 +1,196 @@
+timestamp,process_path,process_hash,source_ip,dest_ip,dest_domain,dest_port,bytes_sent,bytes_recv,protocol,dns_query,parent_process,user_context
+12/6/24 10:00,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,dns.google,services.exe,SYSTEM
+12/6/24 10:01,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,142.250.185.46,google.com,443,512,2048,TCP,google.com,explorer.exe,User
+12/6/24 10:02,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 10:03,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,172.217.14.206,youtube.com,443,1024,4096,TCP,youtube.com,explorer.exe,User
+12/6/24 10:04,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,microsoft.com,services.exe,SYSTEM
+12/6/24 10:05,C:\Program Files\Outlook\outlook.exe,e5f6a7b8c9d0,192.168.1.100,40.97.156.114,outlook.office365.com,443,768,3072,TCP,outlook.office365.com,explorer.exe,User
+12/6/24 10:06,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,github.com,services.exe,SYSTEM
+12/6/24 10:07,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,151.101.1.140,reddit.com,443,896,2560,TCP,reddit.com,explorer.exe,User
+12/6/24 10:08,C:\Windows\System32\WindowsUpdate.exe,f6a7b8c9d0e1,192.168.1.100,23.201.164.10,microsoft.com,443,512,8192,TCP,update.microsoft.com,services.exe,SYSTEM
+12/6/24 10:09,C:\Program Files\Slack\slack.exe,a7b8c9d0e1f2,192.168.1.100,52.85.151.22,slack.com,443,640,1920,TCP,slack.com,explorer.exe,User
+12/6/24 10:10,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,amazon.com,services.exe,SYSTEM
+12/6/24 10:11,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,54.239.28.85,amazon.com,443,1152,4608,TCP,amazon.com,explorer.exe,User
+12/6/24 10:12,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 10:13,C:\Program Files\Teams\teams.exe,b8c9d0e1f2a3,192.168.1.100,13.107.42.14,teams.microsoft.com,443,2048,6144,TCP,teams.microsoft.com,explorer.exe,User
+12/6/24 10:14,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,facebook.com,services.exe,SYSTEM
+12/6/24 10:15,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,157.240.22.35,facebook.com,443,896,3584,TCP,facebook.com,explorer.exe,User
+12/6/24 10:16,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,twitter.com,services.exe,SYSTEM
+12/6/24 10:17,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,104.244.42.193,twitter.com,443,768,2304,TCP,twitter.com,explorer.exe,User
+12/6/24 10:18,C:\Windows\System32\WindowsDefender.exe,c9d0e1f2a3b4,192.168.1.100,13.107.4.50,microsoft.com,443,384,1536,TCP,wdcp.microsoft.com,services.exe,SYSTEM
+12/6/24 10:19,C:\Program Files\Spotify\spotify.exe,d0e1f2a3b4c5,192.168.1.100,35.186.224.25,spotify.com,443,1280,15360,TCP,spotify.com,explorer.exe,User
+12/6/24 10:20,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,linkedin.com,services.exe,SYSTEM
+12/6/24 10:21,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,13.107.42.14,linkedin.com,443,640,1920,TCP,linkedin.com,explorer.exe,User
+12/6/24 10:22,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 10:23,C:\Program Files\Discord\discord.exe,e1f2a3b4c5d6,192.168.1.100,162.159.128.233,discord.com,443,896,2688,TCP,discord.com,explorer.exe,User
+12/6/24 10:24,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,netflix.com,services.exe,SYSTEM
+12/6/24 10:25,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,52.85.151.22,netflix.com,443,1536,20480,TCP,netflix.com,explorer.exe,User
+12/6/24 10:26,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,instagram.com,services.exe,SYSTEM
+12/6/24 10:27,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,157.240.22.174,instagram.com,443,1024,4096,TCP,instagram.com,explorer.exe,User
+12/6/24 10:28,C:\Windows\System32\WindowsUpdate.exe,f6a7b8c9d0e1,192.168.1.100,23.201.164.10,microsoft.com,443,512,8192,TCP,update.microsoft.com,services.exe,SYSTEM
+12/6/24 10:29,C:\Program Files\Zoom\zoom.exe,f2a3b4c5d6e7,192.168.1.100,170.114.52.2,zoom.us,443,3072,9216,TCP,zoom.us,explorer.exe,User
+12/6/24 10:30,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,stackoverflow.com,services.exe,SYSTEM
+12/6/24 10:31,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,151.101.1.69,stackoverflow.com,443,768,2304,TCP,stackoverflow.com,explorer.exe,User
+12/6/24 10:32,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 10:33,C:\Program Files\VSCode\code.exe,a3b4c5d6e7f8,192.168.1.100,140.82.121.4,github.com,443,896,3584,TCP,github.com,explorer.exe,User
+12/6/24 10:34,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,apple.com,services.exe,SYSTEM
+12/6/24 10:35,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,17.253.144.10,apple.com,443,640,1920,TCP,apple.com,explorer.exe,User
+12/6/24 10:36,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,wikipedia.org,services.exe,SYSTEM
+12/6/24 10:37,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,91.198.174.192,wikipedia.org,443,512,2048,TCP,wikipedia.org,explorer.exe,User
+12/6/24 10:38,C:\Windows\System32\WindowsDefender.exe,c9d0e1f2a3b4,192.168.1.100,13.107.4.50,microsoft.com,443,384,1536,TCP,wdcp.microsoft.com,services.exe,SYSTEM
+12/6/24 10:39,C:\Program Files\Dropbox\dropbox.exe,b4c5d6e7f8a9,192.168.1.100,162.125.19.131,dropbox.com,443,1024,4096,TCP,dropbox.com,explorer.exe,User
+12/6/24 10:40,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,twitch.tv,services.exe,SYSTEM
+12/6/24 10:41,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,151.101.2.167,twitch.tv,443,2048,16384,TCP,twitch.tv,explorer.exe,User
+12/6/24 10:42,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 10:43,C:\Program Files\Skype\skype.exe,c5d6e7f8a9b0,192.168.1.100,40.114.241.43,skype.com,443,768,2304,TCP,skype.com,explorer.exe,User
+12/6/24 10:44,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,ebay.com,services.exe,SYSTEM
+12/6/24 10:45,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,66.135.192.87,ebay.com,443,896,3584,TCP,ebay.com,explorer.exe,User
+12/6/24 10:46,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,adobe.com,services.exe,SYSTEM
+12/6/24 10:47,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,23.66.43.66,adobe.com,443,640,1920,TCP,adobe.com,explorer.exe,User
+12/6/24 10:48,C:\Windows\System32\WindowsUpdate.exe,f6a7b8c9d0e1,192.168.1.100,23.201.164.10,microsoft.com,443,512,8192,TCP,update.microsoft.com,services.exe,SYSTEM
+12/6/24 10:49,C:\Program Files\Steam\steam.exe,d6e7f8a9b0c1,192.168.1.100,104.97.46.66,steampowered.com,443,1280,10240,TCP,steampowered.com,explorer.exe,User
+12/6/24 10:50,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,paypal.com,services.exe,SYSTEM
+12/6/24 10:51,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,64.4.250.36,paypal.com,443,768,2304,TCP,paypal.com,explorer.exe,User
+12/6/24 10:52,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 10:53,C:\Program Files\OneDrive\onedrive.exe,e7f8a9b0c1d2,192.168.1.100,40.97.156.114,onedrive.live.com,443,1024,4096,TCP,onedrive.live.com,explorer.exe,User
+12/6/24 10:54,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,pinterest.com,services.exe,SYSTEM
+12/6/24 10:55,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,151.101.128.84,pinterest.com,443,896,3584,TCP,pinterest.com,explorer.exe,User
+12/6/24 10:56,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,walmart.com,services.exe,SYSTEM
+12/6/24 10:57,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,161.170.232.28,walmart.com,443,640,1920,TCP,walmart.com,explorer.exe,User
+12/6/24 10:58,C:\Windows\System32\WindowsDefender.exe,c9d0e1f2a3b4,192.168.1.100,13.107.4.50,microsoft.com,443,384,1536,TCP,wdcp.microsoft.com,services.exe,SYSTEM
+12/6/24 10:59,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,172.217.14.206,youtube.com,443,1536,12288,TCP,youtube.com,explorer.exe,User
+12/6/24 11:00,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,yahoo.com,services.exe,SYSTEM
+12/6/24 11:01,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,98.137.11.164,yahoo.com,443,768,2304,TCP,yahoo.com,explorer.exe,User
+12/6/24 11:02,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 11:03,C:\Program Files\Telegram\telegram.exe,f8a9b0c1d2e3,192.168.1.100,149.154.167.51,telegram.org,443,896,2688,TCP,telegram.org,explorer.exe,User
+12/6/24 11:04,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,booking.com,services.exe,SYSTEM
+12/6/24 11:05,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,5.57.16.99,booking.com,443,1024,4096,TCP,booking.com,explorer.exe,User
+12/6/24 11:06,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,cnn.com,services.exe,SYSTEM
+12/6/24 11:07,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,151.101.1.67,cnn.com,443,640,1920,TCP,cnn.com,explorer.exe,User
+12/6/24 11:08,C:\Windows\System32\WindowsUpdate.exe,f6a7b8c9d0e1,192.168.1.100,23.201.164.10,microsoft.com,443,512,8192,TCP,update.microsoft.com,services.exe,SYSTEM
+12/6/24 11:09,C:\Program Files\Notion\notion.exe,a9b0c1d2e3f4,192.168.1.100,104.18.27.75,notion.so,443,768,2304,TCP,notion.so,explorer.exe,User
+12/6/24 11:10,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,nvidia.com,services.exe,SYSTEM
+12/6/24 11:11,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,152.195.38.76,nvidia.com,443,896,3584,TCP,nvidia.com,explorer.exe,User
+12/6/24 11:12,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 11:13,C:\Program Files\Evernote\evernote.exe,b0c1d2e3f4a5,192.168.1.100,204.154.106.196,evernote.com,443,640,1920,TCP,evernote.com,explorer.exe,User
+12/6/24 11:14,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,salesforce.com,services.exe,SYSTEM
+12/6/24 11:15,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,23.1.106.195,salesforce.com,443,1024,4096,TCP,salesforce.com,explorer.exe,User
+12/6/24 11:16,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,weather.com,services.exe,SYSTEM
+12/6/24 11:17,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,104.93.59.131,weather.com,443,512,2048,TCP,weather.com,explorer.exe,User
+12/6/24 11:18,C:\Windows\System32\WindowsDefender.exe,c9d0e1f2a3b4,192.168.1.100,13.107.4.50,microsoft.com,443,384,1536,TCP,wdcp.microsoft.com,services.exe,SYSTEM
+12/6/24 11:19,C:\Program Files\Trello\trello.exe,c1d2e3f4a5b6,192.168.1.100,104.192.143.1,trello.com,443,768,2304,TCP,trello.com,explorer.exe,User
+12/6/24 11:20,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,bing.com,services.exe,SYSTEM
+12/6/24 11:21,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,13.107.21.200,bing.com,443,640,1920,TCP,bing.com,explorer.exe,User
+12/6/24 11:22,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 11:23,C:\Program Files\Malwarebytes\mbam.exe,d2e3f4a5b6c7,192.168.1.100,185.62.188.138,malwarebytes.com,443,512,2048,TCP,malwarebytes.com,services.exe,SYSTEM
+12/6/24 11:24,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,bestbuy.com,services.exe,SYSTEM
+12/6/24 11:25,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,23.218.99.79,bestbuy.com,443,896,3584,TCP,bestbuy.com,explorer.exe,User
+12/6/24 11:26,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,target.com,services.exe,SYSTEM
+12/6/24 11:27,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,104.98.36.91,target.com,443,768,2304,TCP,target.com,explorer.exe,User
+12/6/24 11:28,C:\Windows\System32\WindowsUpdate.exe,f6a7b8c9d0e1,192.168.1.100,23.201.164.10,microsoft.com,443,512,8192,TCP,update.microsoft.com,services.exe,SYSTEM
+12/6/24 11:29,C:\Program Files\GitKraken\gitkraken.exe,e3f4a5b6c7d8,192.168.1.100,140.82.121.4,github.com,443,1024,4096,TCP,github.com,explorer.exe,User
+12/6/24 11:30,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,espn.com,services.exe,SYSTEM
+12/6/24 11:31,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,199.232.194.185,espn.com,443,640,1920,TCP,espn.com,explorer.exe,User
+12/6/24 11:32,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 11:33,C:\Program Files\Postman\postman.exe,f4a5b6c7d8e9,192.168.1.100,34.117.186.192,postman.com,443,768,2304,TCP,postman.com,explorer.exe,User
+12/6/24 11:34,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,nytimes.com,services.exe,SYSTEM
+12/6/24 11:35,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,151.101.1.164,nytimes.com,443,896,3584,TCP,nytimes.com,explorer.exe,User
+12/6/24 11:36,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,hulu.com,services.exe,SYSTEM
+12/6/24 11:37,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,23.50.51.145,hulu.com,443,1536,15360,TCP,hulu.com,explorer.exe,User
+12/6/24 11:38,C:\Windows\System32\WindowsDefender.exe,c9d0e1f2a3b4,192.168.1.100,13.107.4.50,microsoft.com,443,384,1536,TCP,wdcp.microsoft.com,services.exe,SYSTEM
+12/6/24 11:39,C:\Program Files\Figma\figma.exe,a5b6c7d8e9f0,192.168.1.100,104.18.34.207,figma.com,443,1024,4096,TCP,figma.com,explorer.exe,User
+12/6/24 11:40,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,cloudflare.com,services.exe,SYSTEM
+12/6/24 11:41,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,104.16.132.229,cloudflare.com,443,640,1920,TCP,cloudflare.com,explorer.exe,User
+12/6/24 11:42,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 11:43,C:\Program Files\Docker\docker.exe,b6c7d8e9f0a1,192.168.1.100,52.5.171.77,docker.com,443,896,3584,TCP,docker.com,explorer.exe,User
+12/6/24 11:44,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,airbnb.com,services.exe,SYSTEM
+12/6/24 13:31,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,208.67.195.1,juniper.net,443,768,2304,TCP,juniper.net,explorer.exe,User
+12/6/24 13:32,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 13:33,C:\Program Files\Aruba\aruba.exe,f8a9b0c1d2e3,192.168.1.100,104.117.214.87,arubanetworks.com,443,640,1920,TCP,arubanetworks.com,explorer.exe,User
+12/6/24 13:34,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,vmware.com,services.exe,SYSTEM
+12/6/24 13:35,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,13.107.42.14,vmware.com,443,1024,4096,TCP,vmware.com,explorer.exe,User
+12/6/24 13:36,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,citrix.com,services.exe,SYSTEM
+12/6/24 13:37,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,151.139.128.10,citrix.com,443,896,3584,TCP,citrix.com,explorer.exe,User
+12/6/24 13:38,C:\Windows\System32\WindowsDefender.exe,c9d0e1f2a3b4,192.168.1.100,13.107.4.50,microsoft.com,443,384,1536,TCP,wdcp.microsoft.com,services.exe,SYSTEM
+12/6/24 13:39,C:\Program Files\Parallels\parallels.exe,a9b0c1d2e3f4,192.168.1.100,54.230.137.35,parallels.com,443,768,2304,TCP,parallels.com,explorer.exe,User
+12/6/24 13:40,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,virtualbox.org,services.exe,SYSTEM
+12/6/24 13:41,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,23.185.0.2,virtualbox.org,443,640,1920,TCP,virtualbox.org,explorer.exe,User
+12/6/24 13:42,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 13:43,C:\Program Files\HyperV\hyperv.exe,b0c1d2e3f4a5,192.168.1.100,13.107.21.200,microsoft.com,443,1024,4096,TCP,microsoft.com,services.exe,SYSTEM
+12/6/24 13:44,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,proxmox.com,services.exe,SYSTEM
+12/6/24 13:45,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,151.101.2.132,proxmox.com,443,896,3584,TCP,proxmox.com,explorer.exe,User
+12/6/24 13:46,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,nutanix.com,services.exe,SYSTEM
+12/6/24 13:47,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,104.102.48.122,nutanix.com,443,768,2304,TCP,nutanix.com,explorer.exe,User
+12/6/24 13:48,C:\Windows\System32\WindowsUpdate.exe,f6a7b8c9d0e1,192.168.1.100,23.201.164.10,microsoft.com,443,512,8192,TCP,update.microsoft.com,services.exe,SYSTEM
+12/6/24 13:49,C:\Program Files\OpenStack\openstack.exe,c1d2e3f4a5b6,192.168.1.100,23.253.135.79,openstack.org,443,640,1920,TCP,openstack.org,explorer.exe,User
+12/6/24 13:50,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,cloudfoundry.org,services.exe,SYSTEM
+12/6/24 13:51,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,185.199.108.153,cloudfoundry.org,443,1024,4096,TCP,cloudfoundry.org,explorer.exe,User
+12/6/24 13:52,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 13:53,C:\Program Files\Heroku\heroku.exe,d2e3f4a5b6c7,192.168.1.100,52.22.211.69,heroku.com,443,896,2688,TCP,heroku.com,explorer.exe,User
+12/6/24 13:54,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,digitalocean.com,services.exe,SYSTEM
+12/6/24 13:55,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,104.16.124.96,digitalocean.com,443,768,2304,TCP,digitalocean.com,explorer.exe,User
+12/6/24 13:56,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,linode.com,services.exe,SYSTEM
+12/6/24 13:57,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,172.105.64.1,linode.com,443,640,1920,TCP,linode.com,explorer.exe,User
+12/6/24 13:58,C:\Windows\System32\WindowsDefender.exe,c9d0e1f2a3b4,192.168.1.100,13.107.4.50,microsoft.com,443,384,1536,TCP,wdcp.microsoft.com,services.exe,SYSTEM
+12/6/24 13:59,C:\Program Files\Vultr\vultr.exe,e3f4a5b6c7d8,192.168.1.100,108.61.10.10,vultr.com,443,1024,4096,TCP,vultr.com,explorer.exe,User
+12/6/24 14:00,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,ovh.com,services.exe,SYSTEM
+12/6/24 14:01,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,54.36.91.62,ovh.com,443,896,3584,TCP,ovh.com,explorer.exe,User
+12/6/24 14:02,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 14:03,C:\Program Files\Scaleway\scaleway.exe,f4a5b6c7d8e9,192.168.1.100,51.15.227.165,scaleway.com,443,768,2304,TCP,scaleway.com,explorer.exe,User
+12/6/24 14:04,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,hetzner.com,services.exe,SYSTEM
+12/6/24 14:05,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,88.198.0.1,hetzner.com,443,640,1920,TCP,hetzner.com,explorer.exe,User
+12/6/24 14:06,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,ionos.com,services.exe,SYSTEM
+12/6/24 14:07,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,217.160.0.1,ionos.com,443,1024,4096,TCP,ionos.com,explorer.exe,User
+12/6/24 14:08,C:\Windows\System32\WindowsUpdate.exe,f6a7b8c9d0e1,192.168.1.100,23.201.164.10,microsoft.com,443,512,8192,TCP,update.microsoft.com,services.exe,SYSTEM
+12/6/24 14:09,C:\Program Files\GoDaddy\godaddy.exe,a5b6c7d8e9f0,192.168.1.100,64.202.189.170,godaddy.com,443,896,2688,TCP,godaddy.com,explorer.exe,User
+12/6/24 14:10,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,namecheap.com,services.exe,SYSTEM
+12/6/24 14:11,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,104.18.36.127,namecheap.com,443,768,2304,TCP,namecheap.com,explorer.exe,User
+12/6/24 14:12,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 14:13,C:\Program Files\Cloudflare\warp.exe,b6c7d8e9f0a1,192.168.1.100,104.16.132.229,cloudflare.com,443,640,1920,TCP,cloudflare.com,explorer.exe,User
+12/6/24 14:14,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,netlify.com,services.exe,SYSTEM
+12/6/24 14:15,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,52.7.184.248,netlify.com,443,1024,4096,TCP,netlify.com,explorer.exe,User
+12/6/24 14:16,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,vercel.com,services.exe,SYSTEM
+12/6/24 14:17,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,76.223.14.172,vercel.com,443,896,3584,TCP,vercel.com,explorer.exe,User
+12/6/24 14:18,C:\Windows\System32\WindowsDefender.exe,c9d0e1f2a3b4,192.168.1.100,13.107.4.50,microsoft.com,443,384,1536,TCP,wdcp.microsoft.com,services.exe,SYSTEM
+12/6/24 14:19,C:\Program Files\Railway\railway.exe,c7d8e9f0a1b2,192.168.1.100,3.216.34.172,railway.app,443,768,2304,TCP,railway.app,explorer.exe,User
+12/6/24 14:20,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,render.com,services.exe,SYSTEM
+12/6/24 14:21,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,35.185.44.232,render.com,443,640,1920,TCP,render.com,explorer.exe,User
+12/6/24 14:22,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 14:23,C:\Program Files\Fly\flyctl.exe,d8e9f0a1b2c3,192.168.1.100,66.241.124.200,fly.io,443,1024,4096,TCP,fly.io,explorer.exe,User
+12/6/24 14:24,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,supabase.com,services.exe,SYSTEM
+12/6/24 14:25,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,104.18.27.75,supabase.com,443,896,3584,TCP,supabase.com,explorer.exe,User
+12/6/24 14:26,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,firebase.google.com,services.exe,SYSTEM
+12/6/24 14:27,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,142.250.185.46,firebase.google.com,443,768,2304,TCP,firebase.google.com,explorer.exe,User
+12/6/24 14:28,C:\Windows\System32\WindowsUpdate.exe,f6a7b8c9d0e1,192.168.1.100,23.201.164.10,microsoft.com,443,512,8192,TCP,update.microsoft.com,services.exe,SYSTEM
+12/6/24 14:29,C:\Program Files\Amplify\amplify.exe,e9f0a1b2c3d4,192.168.1.100,54.239.28.85,aws.amazon.com,443,640,1920,TCP,aws.amazon.com,explorer.exe,User
+12/6/24 14:30,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,planetscale.com,services.exe,SYSTEM
+12/6/24 14:31,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,76.223.77.61,planetscale.com,443,1024,4096,TCP,planetscale.com,explorer.exe,User
+12/6/24 14:32,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 14:33,C:\Program Files\Neon\neon.exe,f0a1b2c3d4e5,192.168.1.100,44.230.154.69,neon.tech,443,896,2688,TCP,neon.tech,explorer.exe,User
+12/6/24 14:34,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,railway.app,services.exe,SYSTEM
+12/6/24 14:35,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,3.216.34.172,railway.app,443,768,2304,TCP,railway.app,explorer.exe,User
+12/6/24 14:36,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,cockroachlabs.com,services.exe,SYSTEM
+12/6/24 14:37,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,104.18.36.127,cockroachlabs.com,443,640,1920,TCP,cockroachlabs.com,explorer.exe,User
+12/6/24 14:38,C:\Windows\System32\WindowsDefender.exe,c9d0e1f2a3b4,192.168.1.100,13.107.4.50,microsoft.com,443,384,1536,TCP,wdcp.microsoft.com,services.exe,SYSTEM
+12/6/24 14:39,C:\Program Files\Prisma\prisma.exe,a1b2c3d4e5f6,192.168.1.100,104.18.34.207,prisma.io,443,1024,4096,TCP,prisma.io,explorer.exe,User
+12/6/24 14:40,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,hasura.io,services.exe,SYSTEM
+12/6/24 14:41,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,35.244.243.52,hasura.io,443,896,3584,TCP,hasura.io,explorer.exe,User
+12/6/24 14:42,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 14:43,C:\Program Files\Apollo\apollo.exe,b2c3d4e5f6a7,192.168.1.100,52.85.151.22,apollographql.com,443,768,2304,TCP,apollographql.com,explorer.exe,User
+12/6/24 14:44,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,graphql.org,services.exe,SYSTEM
+12/6/24 14:45,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,185.199.108.153,graphql.org,443,640,1920,TCP,graphql.org,explorer.exe,User
+12/6/24 14:46,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,sanity.io,services.exe,SYSTEM
+12/6/24 14:47,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,151.101.1.195,sanity.io,443,1024,4096,TCP,sanity.io,explorer.exe,User
+12/6/24 14:48,C:\Windows\System32\WindowsUpdate.exe,f6a7b8c9d0e1,192.168.1.100,23.201.164.10,microsoft.com,443,512,8192,TCP,update.microsoft.com,services.exe,SYSTEM
+12/6/24 14:49,C:\Program Files\Contentful\contentful.exe,c3d4e5f6a7b8,192.168.1.100,151.101.1.195,contentful.com,443,896,2688,TCP,contentful.com,explorer.exe,User
+12/6/24 14:50,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,strapi.io,services.exe,SYSTEM
+12/6/24 14:51,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,104.26.13.145,strapi.io,443,768,2304,TCP,strapi.io,explorer.exe,User
+12/6/24 14:52,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,192.168.1.1,router.local,80,128,256,TCP,,services.exe,SYSTEM
+12/6/24 14:53,C:\Program Files\WordPress\wordpress.exe,d4e5f6a7b8c9,192.168.1.100,192.0.78.9,wordpress.com,443,640,1920,TCP,wordpress.com,explorer.exe,User
+12/6/24 14:54,C:\Windows\System32\dns.exe,d4e5f6a7b8c9,192.168.1.100,1.1.1.1,cloudflare-dns.com,53,48,96,UDP,wix.com,services.exe,SYSTEM
+12/6/24 14:55,C:\Program Files\Chrome\chrome.exe,c3d4e5f6a7b8,192.168.1.100,185.189.149.54,wix.com,443,1024,4096,TCP,wix.com,explorer.exe,User
+12/6/24 14:56,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.4.4,dns.google,53,64,128,UDP,squarespace.com,services.exe,SYSTEM
+12/6/24 14:57,C:\Program Files\Firefox\firefox.exe,f1e2d3c4b5a6,192.168.1.100,198.185.159.144,squarespace.com,443,896,3584,TCP,squarespace.com,explorer.exe,User
+12/6/24 14:58,C:\Windows\System32\WindowsDefender.exe,c9d0e1f2a3b4,192.168.1.100,13.107.4.50,microsoft.com,443,384,1536,TCP,wdcp.microsoft.com,services.exe,SYSTEM
+12/6/24 14:59,C:\Program Files\Shopify\shopify.exe,e5f6a7b8c9d0,192.168.1.100,23.227.38.32,shopify.com,443,768,2304,TCP,shopify.com,explorer.exe,User
+12/6/24 15:00,C:\Windows\System32\svchost.exe,a1b2c3d4e5f6,192.168.1.100,8.8.8.8,dns.google,53,64,128,UDP,magento.com,services.exe,SYSTEM

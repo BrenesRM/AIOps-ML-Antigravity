@@ -1,0 +1,143 @@
+You are an AIOps, Machine Learning Infrastructure, Python, Windows, Security, and System Administration expert.
+
+I already have a CSV file named:
+network_traffic_data.csv
+
+Schema (already available, do NOT invent columns):
+timestamp,
+process_path,
+process_hash,
+source_ip,
+dest_ip,
+dest_domain,
+dest_port,
+bytes_sent,
+bytes_recv,
+protocol,
+dns_query,
+parent_process,
+user_context
+
+Your task is to design and implement an AIOps-ready machine learning project in CLEAR PHASES.
+You MUST complete and validate each phase before proceeding to the next.
+DO NOT jump ahead.
+
+====================================
+GENERAL RULES
+====================================
+- Use production-grade Python code
+- Prefer sklearn / pandas / numpy for ML
+- Use FastAPI for REST API
+- Model must be serializable (joblib or pickle)
+- Everything must be runnable on:
+  - Google Colab (training)
+  - Local machine (Docker Desktop)
+- Security-aware defaults (input validation, logging)
+- Explain WHY decisions are made
+- Provide folder structure
+- No placeholders like "TODO"
+- Stop and wait for confirmation between phases
+
+====================================
+PHASE 1 — DATA, TRAINING & MODEL EXPORT
+====================================
+Objective:
+Train an ML model using network_traffic_data.csv for anomaly detection or behavioral change detection suitable for AIOps.
+
+Tasks:
+1. Connect to Google Colab
+2. Load network_traffic_data.csv
+3. Perform:
+   - Data cleaning
+   - Feature engineering (categorical encoding, timestamps, ports, bytes)
+   - Explain feature selection
+4. Train an ML model suitable for AIOps:
+   - Unsupervised or semi-supervised preferred
+   - Justify algorithm choice
+5. Evaluate model
+6. Save model to disk
+7. Download model to local machine
+
+Deliverables:
+- Jupyter Notebook (.ipynb)
+- Saved model file
+- Clear instructions to download artifacts
+
+STOP AFTER PHASE 1.
+WAIT until I confirm everything works correctly.
+
+====================================
+PHASE 2 — REST API FOR REAL-TIME EVENTS
+====================================
+Objective:
+Expose the trained model via a REST API for real-time inference and alert dispatch.
+
+Tasks:
+1. Create a FastAPI application
+2. Load the trained model
+3. Expose endpoint:
+   POST /event
+4. Validate incoming payload matches CSV schema
+5. Run inference
+6. Trigger alerts when behavioral change/anomaly detected
+7. Log events and alerts
+
+Deliverables:
+- app.py
+- requirements.txt
+- Example curl request
+- Explanation of alert logic
+
+STOP AFTER PHASE 2.
+WAIT for confirmation.
+
+====================================
+PHASE 3 — EVENT GENERATOR (MOCK AIOps AGENT)
+====================================
+Objective:
+Simulate a network telemetry agent sending events to the REST API.
+
+Tasks:
+1. Create a Python script that:
+   - Reads rows from network_traffic_data.csv
+   - Randomizes values slightly
+   - Sends events to the REST API
+2. Show expected responses
+3. Designed as an AIOps event producer
+
+Deliverables:
+- mock_event_sender.py
+- Execution instructions
+
+STOP AFTER PHASE 3.
+WAIT for confirmation.
+
+====================================
+PHASE 4 — DOCKERIZATION & LOCAL DEPLOYMENT
+====================================
+Objective:
+Run everything locally using Docker Desktop.
+
+Tasks:
+1. Create Dockerfile
+2. Create docker-compose.yml (if needed)
+3. Mount model and app locally
+4. Expose REST API
+5. Ensure reproducible build
+
+Deliverables:
+- Dockerfile
+- docker-compose.yml
+- Run commands
+- Folder structure
+
+====================================
+FINAL OUTPUT FORMAT
+====================================
+- Clear phase-by-phase execution
+- Code blocks only where needed
+- Architecture explanation
+- Security considerations
+- AIOps relevance
+
+Begin with **PHASE 1 ONLY**.

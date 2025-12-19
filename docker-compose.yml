@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  aiops_api:
+    build: .
+    container_name: aiops_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./ml/models:/app/ml/models
+      - ./api:/app/api
+    environment:
+      - LOG_LEVEL=info
+    restart: unless-stopped
