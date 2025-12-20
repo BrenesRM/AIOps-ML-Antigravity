@@ -75,6 +75,17 @@ The project includes a `pytest` suite to verify the API and inference logic.
 
 ---
 
+## 📊 Test Results & Findings
+The system has been verified through automated testing and live telemetry simulation.
+
+- **Automated Tests**: All 4 core test cases passed (Root accessibility, Normal inference, Schema validation, Logic verification).
+- **Simulation**: Confirmed stable throughput and accurate anomaly logging during randomized traffic bursts.
+- **Model Performance**: Isolation Forest inference latency is sub-millisecond, suitable for high-frequency AIOps environments.
+
+For more details, see [TEST_RESULTS.md](./TEST_RESULTS.md).
+
+---
+
 ## 🛡️ Security & AIOps Features
 - **Pydantic Validation:** Strict enforcement of the network telemetry schema.
 - **Structured Logging:** Anomalies are logged with feature scores for auditability.
