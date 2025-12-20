@@ -12,6 +12,7 @@ The system is designed to provide security teams with automated insights into ne
 - **Training:** Google Colab-friendly Jupyter Notebook for high-performance training without local GPU requirements.
 - **Inference Server:** FastAPI REST API providing real-time scoring.
 - **Agent Simulation:** Python-based telemetry generator to simulate live network data streams.
+- **Data Collection Agent:** Standalone Windows `.exe` for capturing live traffic, correlating processes (including IIS), and scheduling collection.
 - **Deployment:** Fully containerized via Docker for portable and consistent execution.
 
 ---
@@ -24,7 +25,12 @@ KodiakAI/MachineLearning/
 ├── ml/
 │   ├── models/             # Exported model artifacts (.joblib)
 │   └── notebooks/          # Colab training notebook
-├── scripts/                # Mock event generator
+├── scripts/
+│   ├── build_exe.py        # Packaging script for the collector
+│   ├── collector.py        # Network capture agent source
+│   ├── mock_event_sender.py # Mock telemetry generator
+│   └── requirements_collector.txt
+├── dist/                   # Compiled standalone executables
 ├── tests/                  # Automated test suite
 ├── Dockerfile              # API container definition
 └── docker-compose.yml      # Orchestration definition
@@ -56,6 +62,35 @@ Start the mock telemetry agent to stream events to the API:
 pip install pandas requests
 python scripts/mock_event_sender.py
 ```
+
+---
+
+## 📡 Live Data Collection (Collector Agent)
+
+The project includes a production-ready collector agent designed to run on Windows servers or clients.
+
+### Features
+- **Process Correlation**: Automatically maps network packets to the initiating process.
+- **IIS Support**: Specifically identifies the Application Pool for `w3wp.exe` worker processes.
+- **Scheduling**: Define `--start-date` and `--end-date` for long-term (e.g., 1-week) capture.
+- **Windows Event Log**: Logs lifecycle events and errors for system auditing.
+
+### Usage
+Run the standalone executable as **Administrator**:
+```powershell
+# Default run (indefinite)
+.\dist\KodiakAiOps-Collector.exe
+
+# Scheduled run
+.\dist\KodiakAiOps-Collector.exe --start-date 2025-12-21 --end-date 2025-12-28
+```
+
+To build from source:
+```powershell
+pip install -r scripts/requirements_collector.txt
+python scripts/build_exe.py
+```
+*Note: Requires [Npcap](https://npcap.com/) to be installed on the host.*
 
 ---
 
