@@ -11,7 +11,7 @@ from collections import deque
 
 # Attempt to import Scapy
 try:
-    from scapy.all import sniff, IP, TCP, UDP, DNS, DNSQR, Ether
+    from scapy.all import sniff, IP, TCP, UDP, DNS, DNSQR, Ether, conf
 except ImportError:
     print("CRITICAL: Scapy not installed. Please install it using 'pip install scapy'.")
     sys.exit(1)
@@ -209,9 +209,21 @@ class TrafficCollector:
             # Sniffing
             try:
                 log_event("Starting network capture...")
-                sniff(prn=self.packet_callback, store=0, timeout=10) # 10s chunks to allow check end_date
+                # store=0 is critical for memory management in long-running captures
+                sniff(prn=self.packet_callback, store=0, timeout=10)
                 self.flush_to_csv()
             except Exception as e:
+                error_msg = str(e).lower()
+                if "winpcap" in error_msg or "npcap" in error_msg or "layer 2" in error_msg:
+                    log_event("CRITICAL ERROR: Npcap/WinPcap is not installed or not working.", "error")
+                    print("\n" + "="*60)
+                    print("ERROR: NPCAP NOT FOUND")
+                    print("This tool requires Npcap to capture network traffic on Windows.")
+                    print("Please download and install it from: https://npcap.com/")
+                    print("Ensure 'Install Npcap in WinPcap API-compatible Mode' is checked.")
+                    print("="*60 + "\n")
+                    sys.exit(1)
+                
                 log_event(f"Capture error: {e}", "error")
                 time.sleep(5)
 

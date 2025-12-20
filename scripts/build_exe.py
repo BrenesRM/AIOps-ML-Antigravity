@@ -20,7 +20,7 @@ def build():
         "--console",
         "--name", "KodiakAiOps-Collector",
         "--uac-admin",  # Request admin privileges in manifest
-        "--collect-submodules", "scapy",
+        "--collect-all", "scapy", # Ensure all scapy layers and arch are included
         "--hidden-import", "win32evtlog",
         "--hidden-import", "win32evtlogutil",
         "scripts/collector.py"

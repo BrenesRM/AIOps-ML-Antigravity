@@ -87,10 +87,13 @@ Run the standalone executable as **Administrator**:
 
 To build from source:
 ```powershell
-pip install -r scripts/requirements_collector.txt
+# 1. Run the setup script (as Administrator) to install Npcap and dependencies
+.\scripts\setup_collector.ps1
+
+# 2. Build the executable
 python scripts/build_exe.py
 ```
-*Note: Requires [Npcap](https://npcap.com/) to be installed on the host.*
+*Note: Requires [Npcap](https://npcap.com/) to be installed on the host. The setup script will handle the download for you.*
 
 ---
 
