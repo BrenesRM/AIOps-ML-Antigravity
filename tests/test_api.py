@@ -10,6 +10,9 @@ def test_root_endpoint():
     assert response.status_code == 200
     assert response.json()["message"] == "AIOps Network Anomaly Detection API is live"
 
+API_KEY = "dev-secret-key-123"
+HEADERS = {"X-API-Key": API_KEY}
+
 def test_inference_endpoint_normal():
     """Verify that a normal event returns a 200 OK and valid schema."""
     payload = {
@@ -27,7 +30,7 @@ def test_inference_endpoint_normal():
         "parent_process": "services.exe",
         "user_context": "SYSTEM"
     }
-    response = requests.post(f"{BASE_URL}/event", json=payload)
+    response = requests.post(f"{BASE_URL}/event", json=payload, headers=HEADERS)
     assert response.status_code == 200
     data = response.json()
     assert "status" in data
@@ -41,8 +44,14 @@ def test_inference_endpoint_invalid_data():
         "dest_ip": "8.8.8.8"
         # Missing required fields
     }
-    response = requests.post(f"{BASE_URL}/event", json=payload)
+    response = requests.post(f"{BASE_URL}/event", json=payload, headers=HEADERS)
     assert response.status_code == 422 # Unprocessable Entity
+
+def test_inference_unauthorized():
+    """Verify that requests without an API key need to be rejected."""
+    payload = {"source_ip": "1.1.1.1"} # Content doesn't matter much as auth fails first
+    response = requests.post(f"{BASE_URL}/event", json=payload)
+    assert response.status_code == 403
 
 def test_inference_logic():
     """Verify that high byte counts or unusual ports trigger different scores."""
@@ -62,7 +71,7 @@ def test_inference_logic():
         "parent_process": "services.exe",
         "user_context": "SYSTEM"
     }
-    response = requests.post(f"{BASE_URL}/event", json=payload_high_sent)
+    response = requests.post(f"{BASE_URL}/event", json=payload_high_sent, headers=HEADERS)
     assert response.status_code == 200
     data = response.json()
     # If the model logic is working, it should return a result

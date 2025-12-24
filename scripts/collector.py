@@ -56,7 +56,11 @@ class TrafficCollector:
         self.output_file = output_file
         self.start_date = start_date
         self.end_date = end_date
-        self.process_cache = {}
+        self.end_date = end_date
+        self.process_details_cache = {} # PID -> {path, hash, user}
+        self.connection_map = {} # (local_port, remote_ip, remote_port) -> PID
+        self.last_cache_update = 0
+        self.CACHE_DURATION = 2.0 # Seconds
         self.dns_cache = {}
         self.buffer = deque(maxlen=1000)
         
@@ -69,54 +73,78 @@ class TrafficCollector:
                 writer = csv.writer(f)
                 writer.writerow(CSV_HEADER)
 
-    def get_process_info(self, remote_ip, remote_port, local_port):
-        """Finds the process associated with a network connection."""
+    def refresh_cache(self):
+        """Builds a snapshot of current network connections."""
+        current_time = time.time()
+        if current_time - self.last_cache_update < self.CACHE_DURATION:
+            return
+
+        self.connection_map.clear()
         try:
+            # Snapshot all connections at once
             for conn in psutil.net_connections(kind='inet'):
-                if conn.laddr.port == local_port and conn.raddr and conn.raddr.ip == remote_ip and conn.raddr.port == remote_port:
-                    pid = conn.pid
-                    if not pid: continue
-                    
-                    if pid in self.process_cache:
-                        return self.process_cache[pid]
-                    
-                    try:
-                        proc = psutil.Process(pid)
-                        pproc = proc.parent()
-                        
-                        path = proc.exe()
-                        name = proc.name()
-                        ppath = pproc.exe() if pproc else "unknown"
-                        
-                        # Process Hash
-                        file_hash = "unknown"
-                        if os.path.exists(path):
-                            with open(path, "rb") as f:
-                                file_hash = hashlib.md5(f.read()).hexdigest()
-                        
-                        # User Context / IIS detection
-                        user_context = proc.username()
-                        if name.lower() == "w3wp.exe":
-                            cmdline = proc.cmdline()
-                            # IIS AppPool detection: -ap "AppPoolName"
-                            for i, arg in enumerate(cmdline):
-                                if arg == "-ap" and i + 1 < len(cmdline):
-                                    user_context = f"IIS: {cmdline[i+1]}"
-                                    break
-                        
-                        info = {
-                            "path": path,
-                            "hash": file_hash,
-                            "parent": ppath,
-                            "user_context": user_context
-                        }
-                        self.process_cache[pid] = info
-                        return info
-                    except (psutil.NoSuchProcess, psutil.AccessDenied):
-                        continue
+                if conn.status == 'ESTABLISHED' and conn.raddr:
+                    # Key: (LocalPort, RemoteIP, RemotePort)
+                    key = (conn.laddr.port, conn.raddr.ip, conn.raddr.port)
+                    self.connection_map[key] = conn.pid
+            
+            self.last_cache_update = current_time
+        except Exception as e:
+            logging.error(f"Cache refresh failed: {e}")
+
+    def get_process_info(self, remote_ip, remote_port, local_port):
+        """Finds the process associated with a network connection using cached snapshot."""
+        # 1. Look up PID in connection map
+        key = (local_port, remote_ip, remote_port)
+        pid = self.connection_map.get(key)
+        
+        if not pid:
+            return None
+
+        # 2. Look up Process Details (Path, User, etc.)
+        if pid in self.process_details_cache:
+            return self.process_details_cache[pid]
+        
+        # 3. If details missing, fetch and cache them
+        try:
+            proc = psutil.Process(pid)
+            pproc = proc.parent()
+            
+            path = proc.exe()
+            name = proc.name()
+            ppath = pproc.exe() if pproc else "unknown"
+            
+            # Process Hash
+            file_hash = "unknown"
+            if os.path.exists(path):
+                try:
+                    with open(path, "rb") as f:
+                        file_hash = hashlib.md5(f.read()).hexdigest()
+                except (PermissionError, OSError):
+                    pass
+            
+            # User Context / IIS detection
+            user_context = proc.username()
+            if name.lower() == "w3wp.exe":
+                cmdline = proc.cmdline()
+                for i, arg in enumerate(cmdline):
+                    if arg == "-ap" and i + 1 < len(cmdline):
+                        user_context = f"IIS: {cmdline[i+1]}"
+                        break
+            
+            info = {
+                "path": path,
+                "hash": file_hash,
+                "parent": ppath,
+                "user_context": user_context
+            }
+            self.process_details_cache[pid] = info
+            return info
+
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            return None
         except Exception:
-            pass
-        return None
+            return None
 
     def packet_callback(self, pkt):
         """Processes each captured packet."""
@@ -209,8 +237,12 @@ class TrafficCollector:
             # Sniffing
             try:
                 log_event("Starting network capture...")
+                
+                # Check cache before sniffing batch
+                self.refresh_cache()
+                
                 # store=0 is critical for memory management in long-running captures
-                sniff(prn=self.packet_callback, store=0, timeout=10)
+                sniff(prn=self.packet_callback, store=0, timeout=2) # Shorter timeout to allow more frequent cache updates
                 self.flush_to_csv()
             except Exception as e:
                 error_msg = str(e).lower()

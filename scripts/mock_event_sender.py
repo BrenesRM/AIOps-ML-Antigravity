@@ -46,7 +46,8 @@ def send_events():
                 # Clean up NaN values for JSON serialization
                 payload = {k: (v if pd.notnull(v) else None) for k, v in sample.items()}
                 
-                response = requests.post(API_URL, json=payload, timeout=5)
+                headers = {"X-API-Key": os.getenv("AIOPS_API_KEY", "dev-secret-key-123")}
+                response = requests.post(API_URL, json=payload, headers=headers, timeout=5)
                 
                 if response.status_code == 200:
                     result = response.json()

@@ -2,7 +2,8 @@ import os
 import joblib
 import pandas as pd
 import logging
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Security, status
+from fastapi.security import APIKeyHeader
 from pydantic import BaseModel, Field
 from typing import Optional
 from datetime import datetime
@@ -19,6 +20,19 @@ logging.basicConfig(
 logger = logging.getLogger("AIOps-API")
 
 app = FastAPI(title="AIOps Network Anomaly Detection API")
+
+# Security Configuration
+API_KEY_NAME = "X-API-Key"
+API_KEY_HEADER = APIKeyHeader(name=API_KEY_NAME, auto_error=False)
+API_KEY = os.getenv("AIOPS_API_KEY", "dev-secret-key-123")
+
+async def get_api_key(api_key_header: str = Security(API_KEY_HEADER)):
+    if api_key_header == API_KEY:
+        return api_key_header
+    raise HTTPException(
+        status_code=status.HTTP_403_FORBIDDEN,
+        detail="Could not validate credentials"
+    )
 
 # Model Path
 MODEL_PATH = "ml/models/anomaly_model.joblib"
@@ -55,7 +69,7 @@ async def root():
     return {"message": "AIOps Network Anomaly Detection API is live"}
 
 @app.post("/event")
-async def predict_event(event: NetworkEvent):
+async def predict_event(event: NetworkEvent, api_key: str = Security(get_api_key)):
     if not model_artifacts:
         raise HTTPException(status_code=503, detail="Model is not loaded. Please upload anomaly_model.joblib to ml/models/")
 

@@ -100,7 +100,14 @@ python scripts/build_exe.py
 ## 🧪 Testing
 The project includes a `pytest` suite to verify the API and inference logic.
 
-**Local Test Execution:**
+**Automated Verification (Recommended):**
+The project includes a comprehensive PowerShell script that verifies the entire pipeline (Environment, Model, API, and Live Simulation).
+
+```powershell
+.\scripts\Invoke-AppTest.ps1
+```
+
+**Manual Test Execution:**
 1. Ensure the API is running (Locally or in Docker).
 2. Install test dependencies:
    ```bash
@@ -125,6 +132,10 @@ For more details, see [TEST_RESULTS.md](./TEST_RESULTS.md).
 ---
 
 ## 🛡️ Security & AIOps Features
+- **API Security:** All write operations (`POST /event`) require an **API Key**.
+  - Default Dev Key: `dev-secret-key-123`
+  - Header: `X-API-Key: <your-key>`
+  - Production: Set `AIOPS_API_KEY` environment variable.
 - **Pydantic Validation:** Strict enforcement of the network telemetry schema.
 - **Structured Logging:** Anomalies are logged with feature scores for auditability.
 - **Behavioral Detection:** Uses unsupervised learning to detect shifts in traffic patterns (e.g., unusual ports or byte volumes).
