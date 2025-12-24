@@ -15,6 +15,16 @@ The system is designed to provide security teams with automated insights into ne
 - **Data Collection Agent:** Standalone Windows `.exe` for capturing live traffic, correlating processes (including IIS), and scheduling collection.
 - **Deployment:** Fully containerized via Docker for portable and consistent execution.
 
+### 🔄 Data Flow
+The following diagram illustrates the end-to-end processing pipeline, from packet capture to anomaly detection:
+
+![System Flow Graph](./FlowGraph.png)
+
+1.  **Capture**: The `Collector` agent captures live network packets and correlates them with process metadata (PID, User, IIS AppPool).
+2.  **Transmission**: Events are securely sent to the `Inference API` via REST (secured with API Key).
+3.  **Inference**: The API preprocesses the data and passes it to the **Isolation Forest** model.
+4.  **Action**: The model assigns an anomaly score; high scores trigger immediate alerts.
+
 ---
 
 ## 📂 Folder Structure
