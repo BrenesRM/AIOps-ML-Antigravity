@@ -9,3 +9,9 @@
 2025-12-24 09:58:38,339 [INFO] Model loaded successfully from ml/models/anomaly_model.joblib
 2025-12-24 10:00:09,209 [INFO] Model loaded successfully from ml/models/anomaly_model.joblib
 2025-12-24 10:20:20,695 [INFO] Model loaded successfully from ml/models/anomaly_model.joblib
+2025-12-24 10:25:15,391 [INFO] Model loaded successfully from ml/models/anomaly_model.joblib
+2025-12-24 10:25:19,063 [INFO] Event processed: Status: normal | Score: 0.012614512047437076
+2025-12-24 10:25:19,089 [WARNING] ALERT: Anomaly detected! Source: 192.168.1.5 -> Dest: 8.8.8.8:443 | Score: -0.1903840245767584
+2025-12-24 10:25:19,624 [INFO] Event processed: Status: normal | Score: 0.05708912772888969
+2025-12-24 10:25:24,172 [WARNING] ALERT: Anomaly detected! Source: 192.168.1.100 -> Dest: 192.168.1.1:80 | Score: -0.04753742985393683
+2025-12-24 10:25:28,506 [INFO] Event processed: Status: normal | Score: 0.0903823121906342
