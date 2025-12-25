@@ -1,10 +1,10 @@
 # AIOps Project Test Results
 
-**Date**: 2025-12-19
+**Date**: 2025-12-24
 **Status**: ✅ ALL TESTS PASSED
 
 ## Execution Overview
-The test plan was executed on the current codebase to verify the integrity of the AIOps pipeline. The evaluation included environment verification, API unit testing, and real-time event simulation.
+The test plan was executed on the current codebase to verify the integrity of the AIOps pipeline. The evaluation included environment verification, API unit testing (with Security), and real-time event simulation.
 
 ## Automated Test Results (pytest)
 | Test Name | Result | Impact |
@@ -13,6 +13,13 @@ The test plan was executed on the current codebase to verify the integrity of th
 | `test_inference_endpoint_normal` | PASS | Baseline inference for normal traffic is stable. |
 | `test_inference_endpoint_invalid_data`| PASS | Input validation successfully catches malformed payloads. |
 | `test_inference_logic` | PASS | The model correctly distinguishes extreme feature values. |
+| `test_inference_unauthorized` | PASS | **[NEW]** Security layer correctly rejects requests without valid API Key. |
+
+## Agent Unit Tests (unittest)
+| Test Name | Result | Impact |
+| :--- | :--- | :--- |
+| `test_get_process_info_found` | PASS | `ProcessTracker` correctly identifies process info from cached network connections. |
+| `test_get_process_info_not_found` | PASS | Gracefully handles missing connection entries. |
 
 ## Simulation Findings
 Running the `mock_event_sender.py` for a live simulation confirmed:
